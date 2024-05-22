@@ -27,18 +27,6 @@ export default function CondensedTrack(props) {
                     {track.shortDescription}
                 </Text>
             </View>
-
-            {/*<Text>*/}
-            {/*    {track.artistName}*/}
-            {/*</Text>*/}
-
-            {/*<Text>*/}
-            {/*    {track.trackName}*/}
-            {/*</Text>*/}
-
-            {/*<Text>*/}
-            {/*    {track.shortDescription}*/}
-            {/*</Text>*/}
         </View>
     )
 }

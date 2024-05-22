@@ -1,7 +1,6 @@
-// trackManager.js
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export const loadLikedTracks = async () => {
+export const loadFavTracks = async () => {
     try {
         const savedLikedTracks = await AsyncStorage.getItem('likedTracks');
         return savedLikedTracks ? JSON.parse(savedLikedTracks) : {};
@@ -11,7 +10,7 @@ export const loadLikedTracks = async () => {
     }
 };
 
-export const saveLikedTracks = async (likedTracks) => {
+export const keepFavTracks = async (likedTracks) => {
     try {
         await AsyncStorage.setItem('likedTracks', JSON.stringify(likedTracks));
     } catch (error) {
@@ -19,7 +18,7 @@ export const saveLikedTracks = async (likedTracks) => {
     }
 };
 
-export const toggleLikeTrack = (likedTrack, item) => {
+export const addFav = (likedTrack, item) => {
     const trackId = item.trackId;
     const updatedLikedTracks = {...likedTrack};
 

@@ -1,7 +1,6 @@
 import {useState, useEffect} from "react";
-import CondensedTrack from "../components/CondensedTrack";
 import SearchedTrack from "../components/SearchedTrack";
-import {Button, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {Text, TextInput, TouchableOpacity, View} from "react-native";
 import {searchScreenStyle} from "../stylesheet/searchScreenStyle";
 
 
@@ -14,7 +13,6 @@ export default function SearchScreen(navigation) {
         try {
             const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(searchTerm)}${searchEntity}&lang=fr_fr`);
             const result = await response.json()
-            // console.log(result)
             setTrack(result.results)
         } catch (err) {
             console.log(err)

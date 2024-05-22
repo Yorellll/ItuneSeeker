@@ -1,5 +1,4 @@
 import {Image, Text, View} from 'react-native';
-import LikeButton from "./LikeButton";
 
 export default function DetailedTrack(props) {
     const track = props.track;
