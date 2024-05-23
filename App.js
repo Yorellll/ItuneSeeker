@@ -13,11 +13,12 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName={'Home'}>
 
-                <Stack.Screen name={'Home'} component={searchScreen} options={{headerShown: false}}></Stack.Screen>
-                <Stack.Screen name={'singleTrack'} component={singleTrack}
-                              options={{headerShown: false}}></Stack.Screen>
-                <Stack.Screen name={'listLikedTrack'} component={ListLikedTrack}
-                              options={{headerShown: false}}></Stack.Screen>
+                <Stack.Screen name={'Home'} component={searchScreen}>
+                </Stack.Screen>
+                <Stack.Screen name={'Details'} component={singleTrack}
+                ></Stack.Screen>
+                <Stack.Screen name={'Favorite'} component={ListLikedTrack}
+                ></Stack.Screen>
 
             </Stack.Navigator>
         </NavigationContainer>

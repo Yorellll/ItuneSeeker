@@ -33,7 +33,7 @@ export default function SearchedTrack(props) {
     return (
         <View>
             <TouchableOpacity
-                onPress={() => navigation.navigate('listLikedTrack', {favTrack: likedTrack})}
+                onPress={() => navigation.navigate('Favorite', {favTrack: likedTrack})}
                 style={searchScreenStyle.favButton}>
                 <Text style={searchScreenStyle.buttonText}>Favoris</Text>
             </TouchableOpacity>
@@ -42,7 +42,7 @@ export default function SearchedTrack(props) {
                 data={track}
                 renderItem={({item}) =>
                     <TouchableOpacity style={searchScreenStyle.trackItemList} onPress={() => {
-                        navigation.navigate('singleTrack', {track: {item}})
+                        navigation.navigate('Details', {track: {item}})
                     }}>
                         <CondensedTrack track={item}/>
                         {(searchSetting.toString() === "&entity=musicTrack" || !searchSetting) &&

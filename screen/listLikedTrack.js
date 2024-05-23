@@ -30,18 +30,19 @@ export default function ListLikedTrack() {
 
 
     return (
-        <View style={{flex: 1}}>
+        <View>
             <FlatList
                 data={favTrackArray}
                 renderItem={({item}) =>
 
                     <TouchableOpacity style={searchScreenStyle.trackItemList} onPress={() => {
-                        navigation.navigate('singleTrack', {track: {item}})
+                        navigation.navigate('Details', {track: {item}})
                     }}>
                         <CondensedTrack track={item}/>
                         <LikeButton item={item} likedTrack={likedTrack} likeAction={likeAction}></LikeButton>
                     </TouchableOpacity>
-                }
+            }
+
                 ListEmptyComponent={<Text>Vous n'avez ajouté aucune musique à vos favoris.</Text>}
                 keyExtractor={item => item.trackId}
             />
