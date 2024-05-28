@@ -11,7 +11,7 @@ export default function CondensedTrack(props) {
     return (
         //Ici la view retourné par le composant
         <View style={searchScreenStyle.condensedTrackContainer}>
-            Ici la vue container de l'image
+            {/*Ici la vue container de l'image*/}
             <View style={searchScreenStyle.imageContainer}>
                 {/*Ici, on affiche l'image que s'il y en a une*/}
                 {image && <Image
