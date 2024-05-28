@@ -1,5 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+
+//Ici se trouve les fonctions nécéssaire à la sauvegardes des musiques liké sur le téléphone
+
+//Celle ci permet de charger les musiques en mémoire
 export const loadFavTracks = async () => {
     try {
         const savedLikedTracks = await AsyncStorage.getItem('likedTracks');
@@ -10,6 +14,7 @@ export const loadFavTracks = async () => {
     }
 };
 
+//Celle ci permet de sauvegarder les musiques liké en mémoire
 export const keepFavTracks = async (likedTracks) => {
     try {
         await AsyncStorage.setItem('likedTracks', JSON.stringify(likedTracks));
@@ -18,6 +23,7 @@ export const keepFavTracks = async (likedTracks) => {
     }
 };
 
+//Celle ci permet d'ajouter une musique like en mémoire
 export const addFav = (likedTrack, item) => {
     const trackId = item.trackId;
     const updatedLikedTracks = {...likedTrack};
