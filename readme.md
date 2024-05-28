@@ -2,7 +2,7 @@
 
 ## Description: 
 
-Cette application est un dédié à la recherche de musique et d'artiste. Elle permet de gérer des musiques en les notant et en les ajoutant à une liste de favoris.
+Cette application est dédié à la recherche de musique et d'artiste. Elle permet de gérer des musiques en les notant et en les ajoutant à une liste de favoris.
 
 
 ## Fonctionnalités :
